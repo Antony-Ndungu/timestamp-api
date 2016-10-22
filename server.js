@@ -1,7 +1,12 @@
 var express = require('express');
 var app = express();
 var moment = require('moment');
+var fs = require('fs');
 var port = process.env.PORT || 3000;
+
+app.get('/', function(req, res){
+	fs.createReadStream('./views/index.html').pipe(res);
+});
 
 app.get('/:timestamp', function(req, res){
 	var time = moment(req.params.timestamp, "MMMM DD, YYYY", true);
