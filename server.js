@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var moment = require('moment');
+var port = process.env.PORT || 3000;
 
 app.get('/:timestamp', function(req, res){
 	var time = moment(req.params.timestamp, "MMMM DD, YYYY", true);
@@ -20,6 +21,6 @@ app.get('/:timestamp', function(req, res){
 	});
 });
 
-app.listen(3000, function(){
-	console.log("Example app listening on port 3000!");
+app.listen(port, function(){
+	console.log("timestamp microservice is running on port " + port);
 });
