@@ -1,5 +1,5 @@
 # Timestamp Microservice API
-This is an Free Code Camp API project challenge.
+This is a Free Code Camp API project challenge.
 
 You can test it here: 
 
