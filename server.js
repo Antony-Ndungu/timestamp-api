@@ -1,8 +1,23 @@
 var express = require('express');
 var app = express();
+var moment = require('moment');
 
-app.get('/', function(req, res){
-	res.send("Hello world!");
+app.get('/:timestamp', function(req, res){
+	var time = moment(req.params.timestamp, "MMMM DD, YYYY", true);
+	if(!time.isValid()){
+		time = moment.unix(req.params.timestamp);
+		if(!time.isValid()){
+			res.json({
+				unix : null,
+				natural : null
+			});
+		}
+
+	}
+	res.json({
+		unix : time.format('X'),
+		natural : time.format('MMMM DD, YYYY')
+	});
 });
 
 app.listen(3000, function(){
