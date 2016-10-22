@@ -10,6 +10,7 @@
   "author": "Antony Ndungu Maina",
   "license": "ISC",
   "dependencies": {
+    "consolidate": "^0.14.1",
     "express": "^4.14.0",
     "moment": "^2.15.1"
   }
