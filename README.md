@@ -5,7 +5,7 @@ You can test it here:
 
 ## Example Usage:
 
-https://sugar-fish.hyperdev.space/October%2022,%202016
+https://sugar-fish.hyperdev.space/October 22, 2016
 
 https://sugar-fish.hyperdev.space/476046800
 
